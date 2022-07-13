@@ -1,0 +1,4 @@
+type hal_qti_gnss, domain;
+type hal_qti_gnss_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_qti_gnss);
+vndbinder_use(hal_qti_gnss);

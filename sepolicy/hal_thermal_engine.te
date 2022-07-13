@@ -1,0 +1,4 @@
+type hal_thermal_engine, domain;
+type hal_thermal_engine_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_thermal_engine);
+vndbinder_use(hal_thermal_engine);

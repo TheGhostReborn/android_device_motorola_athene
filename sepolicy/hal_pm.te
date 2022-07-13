@@ -1,0 +1,4 @@
+type hal_pm, domain;
+type hal_pm_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_pm);
+vndbinder_use(hal_pm);

@@ -1,0 +1,4 @@
+type hal_mmi_laser, domain;
+type hal_mmi_laser_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_mmi_laser);
+vndbinder_use(hal_mmi_laser);

@@ -12,5 +12,26 @@
 /(vendor|system/vendor)/bin/motosh														u:object_r:hal_motosh_exec:s0
 /(vendor|system/vendor)/bin/time_daemon													u:object_r:hal_time_daemon_exec:s0
 /(vendor|system/vendor)/bin/imsdatadaemon												u:object_r:hal_imsdatadaemon_exec:s0
+/(vendor|system/vendor)/bin/mm-qcamera-daemon											u:object_r:hal_mm_qcamera_daemon_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.bluetooth@1\.0-service-qti			u:object_r:hal_bluetooth_athene_exec:s0
+/(vendor|system/vendor)/etc/init\.oem\.hw\.sh											u:object_r:hal_oem_hw_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.light@2\.0-service\.athene			u:object_r:hal_light_athene_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.power-service-qti						u:object_r:hal_power_athene_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.gnss@1\.0-service							u:object_r:hal_qti_gnss_exec:s0
+/(vendor|system/vendor)/bin/hw/vendor\.qti\.hardware\.perf@1\.0-service					u:object_r:hal_qti_perf_exec:s0
+/(vendor|system/vendor)/bin/rmt_storage													u:object_r:hal_rmt_storage_exec:s0
+/(vendor|system/vendor)/bin/msm_irqbalance												u:object_r:hal_msm_irqbalance_exec:s0
+/(vendor|system/vendor)/bin/pm-service 													u:object_r:hal_pm_exec:s0
+/(vendor|system/vendor)//vendor/bin/qseecomd											u:object_r:hal_qseecomd_exec:s0
+/(vendor|system/vendor)/bin/mm-pp-daemon												u:object_r:hal_mm_pp_daemon_exec:s0
+/(vendor|system/vendor)/bin/irsc_util													u:object_r:hal_irsc_util_exec:s0
+/(vendor|system/vendor)/bin/imsqmidaemon												u:object_r:hal_imsqmidaemon_exec:s0
+/(vendor|system/vendor)/bin/tftp_server													u:object_r:hal_tftp_server_exec:s0
+/(vendor|system/vendor)/bin/netmgrd														u:object_r:hal_netmgrd_exec:s0
+/(vendor|system/vendor)/bin/adsprpcd													u:object_r:hal_adsprpcd_exec:s0
+/(vendor|system/vendor)/bin/wcnss_service												u:object_r:hal_wcnss_exec:s0
+/(vendor|system/vendor)/bin/thermal-engine												u:object_r:hal_thermal_engine_exec:s0
+/(vendor|system/vendor)/bin/perfservice													u:object_r:hal_perfservice_exec:s0
+/(vendor|system/vendor)/etc/init\.mmi\.laser\.sh										u:object_r:hal_mmi_laser_exec:s0
+/(vendor|system/vendor)/bin/hw/android\.hardware\.sensors@1\.0-service_moto				u:object_r:hal_moto_sensors_exec:s0
 /(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service		u:object_r:hal_moto_cam_exec:s0
-
