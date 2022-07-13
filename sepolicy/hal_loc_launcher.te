@@ -1,0 +1,4 @@
+type hal_loc_launcher, domain;
+type hal_loc_launcher_exec, exec_type, vendor_file_type, file_type;
+init_daemon_domain(hal_loc_launcher)
+vndbinder_use(hal_loc_launcher); 

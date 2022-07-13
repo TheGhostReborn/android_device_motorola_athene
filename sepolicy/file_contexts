@@ -1,0 +1,16 @@
+/bt_firmware																			u:object_r:bt_firmware_file:s0
+/dsp																					u:object_r:dsp_file:s0
+/firmware																				u:object_r:firmware_file:s0
+/fsg																					u:object_r:fsg_file:s0
+/persist																				u:object_r:persist_file:s0
+
+/tombstones																				u:object_r:rootfs:s0
+
+/(vendor|system/vendor)/bin/cnd															u:object_r:hal_cnd_exec:s0
+/(vendor|system/vendor)/bin/loc_launcher												u:object_r:hal_loc_launcher_exec:s0
+/(vendor|system/vendor)/bin/ATFWD-daemon												u:object_r:hal_atfwd_exec:s0
+/(vendor|system/vendor)/bin/motosh														u:object_r:hal_motosh_exec:s0
+/(vendor|system/vendor)/bin/time_daemon													u:object_r:hal_time_daemon_exec:s0
+/(vendor|system/vendor)/bin/imsdatadaemon												u:object_r:hal_imsdatadaemon_exec:s0
+/(vendor|system/vendor)/bin/hw/motorola\.hardware\.camera\.provider@2\.4-service		u:object_r:hal_moto_cam_exec:s0
+
