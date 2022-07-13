@@ -67,7 +67,11 @@ PRODUCT_COPY_FILES += \
 # Motorola Camera permissions
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/camera/com.motorola.camera.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.camera.xml \
-    $(LOCAL_PATH)/configs/camera/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml \
+    $(LOCAL_PATH)/configs/camera/com.motorola.cameraone.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.motorola.cameraone.xml
+
+# Permissions
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/configs/permissions/privapp-permissions_athene.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions_athene.xml
 
 # External camera
 PRODUCT_COPY_FILES += \
