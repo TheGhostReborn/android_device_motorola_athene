@@ -46,10 +46,17 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	vendor.audio_hal.period_size=240 \
 	persist.audio.endcall.delay=250
 
+# Debug
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.sys.usb.config=mtp,adb \
+    ro.adb.secure=0 \
+    ro.secure=0 \
+    ro.debuggable=1
+
 # Bluetooth
 PRODUCT_PROPERTY_OVERRIDES += \
 	bluetooth.hfp.client=1 \
-	qcom.bluetooth.soc=pronto \
+	qcom.bluetooth.soc=smd \
 	vendor.qcom.bluetooth.soc=pronto \
 	ro.bluetooth.hfp.ver=1.7 \
 	ro.qualcomm.bt.hci_transport=smd \
@@ -77,10 +84,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.vendor.cne.rat.wlan.chip.oem=WCN \
 	persist.vendor.dpm.feature=0 \
 	persist.vendor.sys.cnd.iwlan=1
-
-# Codec2 switch
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.media.codec2=2
 
 # Coresight
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -111,8 +114,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	debug.enable.sglscale=1 \
 	ro.opengles.version=196610 \
 	ro.sf.lcd_density=480 \
-	debug.hwui.use_buffer_age=false \
-	debug.sf.enable_gl_backpressure=1
+	debug.hwui.use_buffer_age=false
 
 # DRM
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -268,13 +270,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	persist.data.mode=concurrent \
 	persist.data.iwlan.enable=true
 
-# SurfaceFlinger
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    ro.surface_flinger.protected_contents=true \
-    ro.surface_flinger.vsync_event_phase_offset_ns=2000000 \
-    ro.surface_flinger.vsync_sf_event_phase_offset_ns=6000000 \
-    ro.surface_flinger.use_color_management=true
-
 #Trim properties
 PRODUCT_PROPERTY_OVERRIDES += \
 	ro.vendor.qti.sys.fw.use_trim_settings=true \
@@ -333,3 +328,4 @@ PRODUCT_PROPERTY_OVERRIDES += \
 	ro.mot.build.product.increment=11 \
 	ro.mot.build.version.release=28.11 \
 	ro.mot.ignore_csim_appid=true
+

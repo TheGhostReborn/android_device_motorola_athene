@@ -56,11 +56,10 @@ BUILD_BROKEN_USES_BUILD_HOST_EXECUTABLE := true
 
 # Kernel
 BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 earlyprintk androidboot.selinux=permissive
-BOARD_KERNEL_CMDLINE += skip_initramfs rootwait ro init=/init root=/dev/dm-0 dm=\"system none ro,0 1 android-verity /dev/mmcblk0p47\"
 BOARD_KERNEL_CMDLINE += loop.max_part=7
 BOARD_KERNEL_IMAGE_NAME := zImage
 BOARD_KERNEL_BASE := 0x80000000
-BOARD_KERNEL_PAGESIZE := 2048
+BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_SEPARATED_DT := true
 TARGET_CUSTOM_DTBTOOL := dtbTool_custom
 BOARD_DTBTOOL_ARGS := --force-v3 --motorola 1
@@ -106,6 +105,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_QCOM := true
 QCOM_BT_READ_ADDR_FROM_PROP := true
+
 
 # Camera
 # Force camera module to be compiled only in 32-bit mode on 64-bit systems
@@ -167,9 +167,6 @@ TARGET_LD_SHIM_LIBS := \
 TARGET_INIT_VENDOR_LIB := //$(DEVICE_PATH):libinit_athene
 TARGET_RECOVERY_DEVICE_MODULES := //$(DEVICE_PATH):libinit_athene
 
-# IPA
-USE_DEVICE_SPECIFIC_DATA_IPA_CFG_MGR := true
-
 # GPS
 BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 USE_DEVICE_SPECIFIC_GPS := true
@@ -223,6 +220,9 @@ TARGET_KEYMASTER_WAIT_FOR_QSEE := true
 # CNE and DPM
 BOARD_USES_QCNE := true
 
+# sched
+USE_LIB_PROCESS_GROUP := true
+
 # Sensors
 USE_SENSOR_MULTI_HAL := true
 #BOARD_USES_MOT_SENSOR_HUB := true
@@ -241,9 +241,6 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/recovery.fstab
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
 LZMA_RAMDISK_TARGETS := recovery
-
-# RIL
-TARGET_PROVIDES_QTI_TELEPHONY_JAR := true
 
 # Security patch level
 VENDOR_SECURITY_PATCH := 2018-12-01
